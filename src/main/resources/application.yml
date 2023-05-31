@@ -1,0 +1,33 @@
+spring:
+  application:
+    name: 'api-pedidos'
+  jpa:
+    show-sql: true
+    database: POSTGRESQL
+    hibernate:
+      ddl-auto: create
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+
+  datasource:
+    url: jdbc:postgresql://localhost:5431/pedidos
+    username: postgres
+    password: motog
+    driverClassName: org.postgresql.Driver
+  flyway:
+    baseline-on-migrate: true
+
+jwt:
+  secret: ${JWT_SECRET:$2a$12$yBwhpMD4efu41WQzcwE.p.x/ZHvjZ0cY8ozYYwP0bBXJI/iv9UzbW}
+  expiration-time: 18000
+
+server:
+  port: 0
+
+eureka:
+  instance:
+    instance-id: ${spring.application.name}:${random.int}
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:8761/eureka

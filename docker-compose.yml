@@ -1,0 +1,11 @@
+services:
+  postgres:
+    image: postgres
+    environment:
+      POSTGRES_PASSWORD: "motog"
+    expose:
+      - "5431"
+    ports:
+      - "5431:5431"
+    command:
+      - -p 5431
