@@ -5,11 +5,11 @@ spring:
     show-sql: true
     database: POSTGRESQL
     hibernate:
-      ddl-auto: create
+      ddl-auto: update
     database-platform: org.hibernate.dialect.PostgreSQLDialect
 
   datasource:
-    url: jdbc:postgresql://localhost:5431/pedidos
+    url: jdbc:postgresql://localhost:5431/api-pedidos
     username: postgres
     password: motog
     driverClassName: org.postgresql.Driver
