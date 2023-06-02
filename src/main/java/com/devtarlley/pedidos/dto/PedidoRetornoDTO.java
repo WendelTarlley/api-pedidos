@@ -1,23 +1,19 @@
 package com.devtarlley.pedidos.dto;
 
-import com.devtarlley.pedidos.enumerated.MetodoPagamento;
 import com.devtarlley.pedidos.enumerated.Status;
-import jakarta.validation.constraints.NotNull;
 import lombok.Data;
 
 import java.math.BigDecimal;
 import java.util.Date;
 
 @Data
-public class PedidoDTO {
+public class PedidoRetornoDTO {
     private Date dataPedido;
-
-    @NotNull
     private Status status;
-
-    @NotNull
     private BigDecimal totalPedido;
 
-    @NotNull
-    private MetodoPagamento metodoPagamento;
+    private Date atualizadoEm;
+
+    //TODO ajustar para a classe de usuário.
+    private Long atualizadoPor;
 }

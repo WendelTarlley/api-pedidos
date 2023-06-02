@@ -9,7 +9,7 @@ import java.math.BigDecimal;
 import java.util.Date;
 
 @Data
-public class PedidoDTO {
+public class AtualizarPedidoDTO {
     private Date dataPedido;
 
     @NotNull

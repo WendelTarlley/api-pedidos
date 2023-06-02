@@ -29,4 +29,9 @@ public class Pedido {
     @Enumerated(EnumType.STRING)
     private MetodoPagamento metodoPagamento;
 
+    private Date atualizadoEm;
+
+    //TODO Implementar classe de usuário
+    private Long atualizadoPor;
+
 }
