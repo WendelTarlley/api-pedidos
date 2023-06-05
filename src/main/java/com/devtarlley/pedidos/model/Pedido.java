@@ -34,4 +34,8 @@ public class Pedido {
     //TODO Implementar classe de usuário
     private Long atualizadoPor;
 
+    @ManyToOne
+    @JoinColumn(name = "cliente_id")
+    private Cliente cliente;
+
 }
